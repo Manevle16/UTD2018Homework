@@ -12,7 +12,9 @@ namespace AVL_Book_Tree_Creator {
 
             try {
 
-                StreamReader sr = new StreamReader("./TextFile1.txt");
+                Console.Write("Enter name of file: ");
+                string input = Console.ReadLine();
+                StreamReader sr = new StreamReader("./" + input);
                 string line = sr.ReadLine();
                 AVLTree tree = new AVLTree();
 
@@ -44,7 +46,6 @@ namespace AVL_Book_Tree_Creator {
                 Console.WriteLine("Exception: " + e);
             } finally {
 
-                Console.WriteLine("In finally block");
             }
         }
     }
