@@ -15,6 +15,7 @@ namespace RandomBSTChecker {
             this.root = root;
         }
 
+        //Randomly inserts a node into the tree
         public void randInsert(AVLNode node) {
 
            
@@ -24,7 +25,8 @@ namespace RandomBSTChecker {
 
             while (!inserted) {
 
-                
+                //Number randomly generated to decide whether to go down the left child or right child
+                //of current node
                 int goLeft = rand.Next(0, 101);
 
                 if (goLeft <= 50) {
@@ -50,6 +52,7 @@ namespace RandomBSTChecker {
             
         }
 
+        //When called, the whole tree will be checked for any issues
         public void checkIfAVLTree() {
 
             checkSubTrees(root);
@@ -59,6 +62,7 @@ namespace RandomBSTChecker {
             }
         }
 
+        //Recursively go down tree from node and check for issues
         public void checkSubTrees(AVLNode node) {
 
             if (node == null)
@@ -95,12 +99,14 @@ namespace RandomBSTChecker {
 
             corrections.Add(text);
         }
-
+        
+        //Gets balance of sent in node
         public int getBalance(AVLNode node) {
 
             return getHeight(node.LeftChild) - getHeight(node.RightChild);
         }
 
+        //Gets height of sent in node through recursion
         public int getHeight(AVLNode node) {
 
             if (node == null) {

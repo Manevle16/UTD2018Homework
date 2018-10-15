@@ -10,9 +10,13 @@ namespace RandomBSTChecker {
             Random rand = new Random();
             AVLTree randAVLTree;
 
+            //Randomly decides number of nudes to be made
             int numOfNodes = rand.Next(4, 20);
+
+            //Initializes tree with a node with randomly generated key
             randAVLTree = new AVLTree(new AVLNode(rand.Next(0, 200)));
 
+            //Inserts nodes with randomly generated keys into tree
             for (int i = 1; i < numOfNodes; i++) {
 
 
@@ -21,6 +25,8 @@ namespace RandomBSTChecker {
 
             }
             Console.WriteLine();
+            
+            //Prints all issues found in randomly generated tree
             randAVLTree.checkIfAVLTree();
 
             
