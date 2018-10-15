@@ -8,28 +8,23 @@ namespace AVL_Book_Tree_Creator {
 
     class AVLNode{
 
-        private int isbn;
-        private string title;
-        private string author;
+        private int key;
         private int balance;
         private int height;
+        private Book book;
         private AVLNode leftChild = null;
         private AVLNode rightChild = null;
         private AVLNode parent = null;
 
         public AVLNode(int isbn, string title, string author){
 
-            this.isbn = isbn;
-            this.title = title;
-            this.author = author;
+            key = isbn;
+            book = new Book(isbn, title, author);
+            
         }
 
         //setters and mutators
-        public int Isbn { get { return isbn; } set { isbn = value; } }
-
-        public string Title { get { return title; } set { title = value; } }
-
-        public string Author { get { return author; } set { author = value; } }
+        
 
         public int Balance { get { return balance; } set { balance = value; } }
 
@@ -40,6 +35,8 @@ namespace AVL_Book_Tree_Creator {
         public AVLNode RightChild { get { return rightChild; } }
 
         public AVLNode Parent { get { return parent; } set { parent = value; } }
+
+        public int Key { get => key; set => key = value; }
 
         public void setLeftChild(AVLNode leftChild) {
             if (leftChild == null) {
@@ -86,18 +83,18 @@ namespace AVL_Book_Tree_Creator {
 
       
         public string toString() {
-            string text = "Isbn: " + isbn + " Height: " + height + " Balance: " + balance;
+            string text = "Isbn: " + key + " Height: " + height + " Balance: " + balance;
 
             if(rightChild != null) {
-                text += " Right: " + rightChild.Isbn;
+                text += " Right: " + rightChild.Key;
             }
 
             if(leftChild != null) {
-                text += " Left: " + leftChild.Isbn;
+                text += " Left: " + leftChild.Key;
             }
 
            if(parent != null) {
-                text += " Parent: " + parent.Isbn;
+                text += " Parent: " + parent.Key;
             }
 
             return text;

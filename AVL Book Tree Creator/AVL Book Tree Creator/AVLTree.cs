@@ -28,7 +28,7 @@ namespace AVL_Book_Tree_Creator {
 
                 //Loop until inserted setting curNode to the inserted node
                 while (nodeInserted == false) {
-                    if(node.Isbn <= curNode.Isbn) {
+                    if(node.Key <= curNode.Key) {
                         if(curNode.LeftChild == null) {
                             curNode.setLeftChild(node);
                             nodeInserted = true;
@@ -51,7 +51,7 @@ namespace AVL_Book_Tree_Creator {
 
         public void setAndCheckBalanceAndHeights(AVLNode curNode) {
 
-            int insertedIsbn = curNode.Isbn;
+            int insertedKey = curNode.Key;
 
             //Cycle through all the nodes until the root is reached
             while (curNode.Parent != null) {
@@ -66,7 +66,7 @@ namespace AVL_Book_Tree_Creator {
                 //Check for imbalance
                 if (Math.Abs(parent.Balance) > 1) {
 
-                    Console.Write("Imbalance occured at inserting ISBN " + insertedIsbn + ";");
+                    Console.Write("Imbalance occured at inserting ISBN " + insertedKey + ";");
                     //Check if left imbalance, else right imbalance
                     if (parent.Balance > 1) {
 
