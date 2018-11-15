@@ -108,6 +108,8 @@ namespace _234TreeCreator {
                     curNode.Parent.RightChild = newRightChild;
                 }
             }
+            newLeftChild.Parent = curNode.Parent;
+            newRightChild.Parent = curNode.Parent;
             Console.WriteLine("Next Child: " + nextChild.toString());
             return nextChild;
         }
