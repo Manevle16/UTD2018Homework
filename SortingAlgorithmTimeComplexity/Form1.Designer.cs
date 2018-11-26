@@ -64,56 +64,50 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // winAlgTextBox
             // 
-            this.winAlgTextBox.Location = new System.Drawing.Point(32, 41);
-            this.winAlgTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.winAlgTextBox.Location = new System.Drawing.Point(13, 17);
             this.winAlgTextBox.Name = "winAlgTextBox";
             this.winAlgTextBox.ReadOnly = true;
-            this.winAlgTextBox.Size = new System.Drawing.Size(671, 38);
+            this.winAlgTextBox.Size = new System.Drawing.Size(271, 20);
             this.winAlgTextBox.TabIndex = 4;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.winAlgTextBox);
-            this.panel1.Location = new System.Drawing.Point(629, 60);
-            this.panel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.panel1.Location = new System.Drawing.Point(252, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(744, 117);
+            this.panel1.Size = new System.Drawing.Size(299, 50);
             this.panel1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(837, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label1.Location = new System.Drawing.Point(335, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 39);
+            this.label1.Size = new System.Drawing.Size(122, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Winning Algorithm";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.insertBtn);
             this.panel2.Controls.Add(this.selectBtn);
             this.panel2.Controls.Add(this.quickBtn);
             this.panel2.Controls.Add(this.mergeBtn);
             this.panel2.Controls.Add(this.heapBtn);
             this.panel2.Controls.Add(this.radixBtn);
-            this.panel2.Location = new System.Drawing.Point(32, 60);
-            this.panel2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.panel2.Location = new System.Drawing.Point(13, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(563, 861);
+            this.panel2.Size = new System.Drawing.Size(226, 357);
             this.panel2.TabIndex = 6;
             // 
             // insertBtn
             // 
-            this.insertBtn.Location = new System.Drawing.Point(59, 38);
-            this.insertBtn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.insertBtn.Location = new System.Drawing.Point(24, 16);
             this.insertBtn.Name = "insertBtn";
-            this.insertBtn.Size = new System.Drawing.Size(440, 141);
+            this.insertBtn.Size = new System.Drawing.Size(176, 58);
             this.insertBtn.TabIndex = 5;
             this.insertBtn.Text = "Insertion Sort";
             this.insertBtn.UseVisualStyleBackColor = true;
@@ -121,10 +115,9 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // selectBtn
             // 
-            this.selectBtn.Location = new System.Drawing.Point(59, 169);
-            this.selectBtn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.selectBtn.Location = new System.Drawing.Point(24, 70);
             this.selectBtn.Name = "selectBtn";
-            this.selectBtn.Size = new System.Drawing.Size(440, 138);
+            this.selectBtn.Size = new System.Drawing.Size(176, 57);
             this.selectBtn.TabIndex = 4;
             this.selectBtn.Text = "Selection Sort";
             this.selectBtn.UseVisualStyleBackColor = true;
@@ -132,10 +125,9 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // quickBtn
             // 
-            this.quickBtn.Location = new System.Drawing.Point(59, 298);
-            this.quickBtn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.quickBtn.Location = new System.Drawing.Point(24, 123);
             this.quickBtn.Name = "quickBtn";
-            this.quickBtn.Size = new System.Drawing.Size(440, 138);
+            this.quickBtn.Size = new System.Drawing.Size(176, 57);
             this.quickBtn.TabIndex = 3;
             this.quickBtn.Text = "Quick Sort";
             this.quickBtn.UseVisualStyleBackColor = true;
@@ -143,10 +135,9 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // mergeBtn
             // 
-            this.mergeBtn.Location = new System.Drawing.Point(59, 427);
-            this.mergeBtn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.mergeBtn.Location = new System.Drawing.Point(24, 176);
             this.mergeBtn.Name = "mergeBtn";
-            this.mergeBtn.Size = new System.Drawing.Size(440, 131);
+            this.mergeBtn.Size = new System.Drawing.Size(176, 54);
             this.mergeBtn.TabIndex = 2;
             this.mergeBtn.Text = "Merge Sort";
             this.mergeBtn.UseVisualStyleBackColor = true;
@@ -154,10 +145,9 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // heapBtn
             // 
-            this.heapBtn.Location = new System.Drawing.Point(59, 544);
-            this.heapBtn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.heapBtn.Location = new System.Drawing.Point(24, 225);
             this.heapBtn.Name = "heapBtn";
-            this.heapBtn.Size = new System.Drawing.Size(440, 141);
+            this.heapBtn.Size = new System.Drawing.Size(176, 58);
             this.heapBtn.TabIndex = 1;
             this.heapBtn.Text = "Heap Sort";
             this.heapBtn.UseVisualStyleBackColor = true;
@@ -165,10 +155,9 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // radixBtn
             // 
-            this.radixBtn.Location = new System.Drawing.Point(59, 677);
-            this.radixBtn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.radixBtn.Location = new System.Drawing.Point(24, 280);
             this.radixBtn.Name = "radixBtn";
-            this.radixBtn.Size = new System.Drawing.Size(440, 126);
+            this.radixBtn.Size = new System.Drawing.Size(176, 52);
             this.radixBtn.TabIndex = 0;
             this.radixBtn.Text = "Radix Sort";
             this.radixBtn.UseVisualStyleBackColor = true;
@@ -176,7 +165,7 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.randomCheck);
             this.panel3.Controls.Add(this.almostOrderCheck);
             this.panel3.Controls.Add(this.reverseOrderCheck);
@@ -184,10 +173,9 @@ namespace SortingAlgorithmTimeComplexity {
             this.panel3.Controls.Add(this.createListBtn);
             this.panel3.Controls.Add(this.listSizeTextBox);
             this.panel3.Controls.Add(this.listSizeScroll);
-            this.panel3.Location = new System.Drawing.Point(632, 212);
-            this.panel3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.panel3.Location = new System.Drawing.Point(253, 88);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 342);
+            this.panel3.Size = new System.Drawing.Size(297, 142);
             this.panel3.TabIndex = 7;
             // 
             // randomCheck
@@ -195,9 +183,10 @@ namespace SortingAlgorithmTimeComplexity {
             this.randomCheck.AutoSize = true;
             this.randomCheck.Checked = true;
             this.randomCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.randomCheck.Location = new System.Drawing.Point(438, 108);
+            this.randomCheck.Location = new System.Drawing.Point(175, 45);
+            this.randomCheck.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.randomCheck.Name = "randomCheck";
-            this.randomCheck.Size = new System.Drawing.Size(160, 36);
+            this.randomCheck.Size = new System.Drawing.Size(66, 17);
             this.randomCheck.TabIndex = 10;
             this.randomCheck.Text = "Random";
             this.randomCheck.UseVisualStyleBackColor = true;
@@ -206,9 +195,10 @@ namespace SortingAlgorithmTimeComplexity {
             // almostOrderCheck
             // 
             this.almostOrderCheck.AutoSize = true;
-            this.almostOrderCheck.Location = new System.Drawing.Point(112, 108);
+            this.almostOrderCheck.Location = new System.Drawing.Point(45, 45);
+            this.almostOrderCheck.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.almostOrderCheck.Name = "almostOrderCheck";
-            this.almostOrderCheck.Size = new System.Drawing.Size(212, 36);
+            this.almostOrderCheck.Size = new System.Drawing.Size(83, 17);
             this.almostOrderCheck.TabIndex = 9;
             this.almostOrderCheck.Text = "AlmostOrder";
             this.almostOrderCheck.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -218,9 +208,10 @@ namespace SortingAlgorithmTimeComplexity {
             // reverseOrderCheck
             // 
             this.reverseOrderCheck.AutoSize = true;
-            this.reverseOrderCheck.Location = new System.Drawing.Point(438, 41);
+            this.reverseOrderCheck.Location = new System.Drawing.Point(175, 17);
+            this.reverseOrderCheck.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.reverseOrderCheck.Name = "reverseOrderCheck";
-            this.reverseOrderCheck.Size = new System.Drawing.Size(246, 36);
+            this.reverseOrderCheck.Size = new System.Drawing.Size(98, 17);
             this.reverseOrderCheck.TabIndex = 8;
             this.reverseOrderCheck.Text = "ReversedOrder";
             this.reverseOrderCheck.UseVisualStyleBackColor = true;
@@ -229,9 +220,10 @@ namespace SortingAlgorithmTimeComplexity {
             // inOrderCheck
             // 
             this.inOrderCheck.AutoSize = true;
-            this.inOrderCheck.Location = new System.Drawing.Point(112, 41);
+            this.inOrderCheck.Location = new System.Drawing.Point(45, 17);
+            this.inOrderCheck.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.inOrderCheck.Name = "inOrderCheck";
-            this.inOrderCheck.Size = new System.Drawing.Size(148, 36);
+            this.inOrderCheck.Size = new System.Drawing.Size(61, 17);
             this.inOrderCheck.TabIndex = 7;
             this.inOrderCheck.Text = "InOrder";
             this.inOrderCheck.UseVisualStyleBackColor = true;
@@ -239,9 +231,10 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // createListBtn
             // 
-            this.createListBtn.Location = new System.Drawing.Point(145, 241);
+            this.createListBtn.Location = new System.Drawing.Point(58, 100);
+            this.createListBtn.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.createListBtn.Name = "createListBtn";
-            this.createListBtn.Size = new System.Drawing.Size(441, 54);
+            this.createListBtn.Size = new System.Drawing.Size(176, 22);
             this.createListBtn.TabIndex = 6;
             this.createListBtn.Text = "Create the List";
             this.createListBtn.UseVisualStyleBackColor = true;
@@ -249,28 +242,28 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             // listSizeTextBox
             // 
-            this.listSizeTextBox.Location = new System.Drawing.Point(551, 170);
-            this.listSizeTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.listSizeTextBox.Location = new System.Drawing.Point(220, 70);
             this.listSizeTextBox.Name = "listSizeTextBox";
             this.listSizeTextBox.ReadOnly = true;
-            this.listSizeTextBox.Size = new System.Drawing.Size(149, 38);
+            this.listSizeTextBox.Size = new System.Drawing.Size(62, 20);
             this.listSizeTextBox.TabIndex = 5;
             this.listSizeTextBox.Text = "1";
             // 
             // listSizeScroll
             // 
-            this.listSizeScroll.Location = new System.Drawing.Point(91, 170);
+            this.listSizeScroll.Location = new System.Drawing.Point(36, 70);
+            this.listSizeScroll.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.listSizeScroll.Maximum = 20000;
             this.listSizeScroll.Minimum = 1;
             this.listSizeScroll.Name = "listSizeScroll";
-            this.listSizeScroll.Size = new System.Drawing.Size(448, 114);
+            this.listSizeScroll.Size = new System.Drawing.Size(179, 45);
             this.listSizeScroll.TabIndex = 4;
             this.listSizeScroll.Value = 1;
             this.listSizeScroll.Scroll += new System.EventHandler(this.listSize_Scroll);
             // 
             // panel4
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.totalTimeResultText);
             this.panel4.Controls.Add(this.movementResultText);
             this.panel4.Controls.Add(this.comparisonResultText);
@@ -283,117 +276,117 @@ namespace SortingAlgorithmTimeComplexity {
             this.panel4.Controls.Add(this.sortLabel);
             this.panel4.Controls.Add(this.dataTypeLabel);
             this.panel4.Controls.Add(this.nLabel);
-            this.panel4.Location = new System.Drawing.Point(632, 595);
+            this.panel4.Location = new System.Drawing.Point(253, 246);
+            this.panel4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(739, 326);
+            this.panel4.Size = new System.Drawing.Size(297, 136);
             this.panel4.TabIndex = 8;
             // 
             // totalTimeResultText
             // 
-            this.totalTimeResultText.Location = new System.Drawing.Point(286, 250);
-            this.totalTimeResultText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.totalTimeResultText.Location = new System.Drawing.Point(114, 103);
             this.totalTimeResultText.Name = "totalTimeResultText";
             this.totalTimeResultText.ReadOnly = true;
-            this.totalTimeResultText.Size = new System.Drawing.Size(300, 38);
+            this.totalTimeResultText.Size = new System.Drawing.Size(122, 20);
             this.totalTimeResultText.TabIndex = 12;
             // 
             // movementResultText
             // 
-            this.movementResultText.Location = new System.Drawing.Point(286, 210);
-            this.movementResultText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.movementResultText.Location = new System.Drawing.Point(114, 87);
             this.movementResultText.Name = "movementResultText";
             this.movementResultText.ReadOnly = true;
-            this.movementResultText.Size = new System.Drawing.Size(300, 38);
+            this.movementResultText.Size = new System.Drawing.Size(122, 20);
             this.movementResultText.TabIndex = 11;
             // 
             // comparisonResultText
             // 
-            this.comparisonResultText.Location = new System.Drawing.Point(286, 170);
-            this.comparisonResultText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.comparisonResultText.Location = new System.Drawing.Point(114, 70);
             this.comparisonResultText.Name = "comparisonResultText";
             this.comparisonResultText.ReadOnly = true;
-            this.comparisonResultText.Size = new System.Drawing.Size(300, 38);
+            this.comparisonResultText.Size = new System.Drawing.Size(122, 20);
             this.comparisonResultText.TabIndex = 10;
             // 
             // sortResultText
             // 
-            this.sortResultText.Location = new System.Drawing.Point(286, 130);
-            this.sortResultText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sortResultText.Location = new System.Drawing.Point(114, 54);
             this.sortResultText.Name = "sortResultText";
             this.sortResultText.ReadOnly = true;
-            this.sortResultText.Size = new System.Drawing.Size(300, 38);
+            this.sortResultText.Size = new System.Drawing.Size(122, 20);
             this.sortResultText.TabIndex = 9;
             // 
             // dataTypeResultText
             // 
-            this.dataTypeResultText.Location = new System.Drawing.Point(286, 90);
-            this.dataTypeResultText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.dataTypeResultText.Location = new System.Drawing.Point(114, 37);
             this.dataTypeResultText.Name = "dataTypeResultText";
             this.dataTypeResultText.ReadOnly = true;
-            this.dataTypeResultText.Size = new System.Drawing.Size(300, 38);
+            this.dataTypeResultText.Size = new System.Drawing.Size(122, 20);
             this.dataTypeResultText.TabIndex = 8;
             // 
             // listSizeResultText
             // 
-            this.listSizeResultText.Location = new System.Drawing.Point(286, 50);
-            this.listSizeResultText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.listSizeResultText.Location = new System.Drawing.Point(114, 21);
             this.listSizeResultText.Name = "listSizeResultText";
             this.listSizeResultText.ReadOnly = true;
-            this.listSizeResultText.Size = new System.Drawing.Size(300, 38);
+            this.listSizeResultText.Size = new System.Drawing.Size(122, 20);
             this.listSizeResultText.TabIndex = 7;
             // 
             // totalTimeLabel
             // 
             this.totalTimeLabel.AutoSize = true;
-            this.totalTimeLabel.Location = new System.Drawing.Point(118, 250);
+            this.totalTimeLabel.Location = new System.Drawing.Point(47, 103);
+            this.totalTimeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.totalTimeLabel.Name = "totalTimeLabel";
-            this.totalTimeLabel.Size = new System.Drawing.Size(157, 32);
+            this.totalTimeLabel.Size = new System.Drawing.Size(60, 13);
             this.totalTimeLabel.TabIndex = 5;
             this.totalTimeLabel.Text = "Total Time:";
             // 
             // movementsLabel
             // 
             this.movementsLabel.AutoSize = true;
-            this.movementsLabel.Location = new System.Drawing.Point(106, 210);
+            this.movementsLabel.Location = new System.Drawing.Point(42, 87);
+            this.movementsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.movementsLabel.Name = "movementsLabel";
-            this.movementsLabel.Size = new System.Drawing.Size(169, 32);
+            this.movementsLabel.Size = new System.Drawing.Size(65, 13);
             this.movementsLabel.TabIndex = 4;
             this.movementsLabel.Text = "Movements:";
             // 
             // comparisonsLabel
             // 
             this.comparisonsLabel.AutoSize = true;
-            this.comparisonsLabel.Location = new System.Drawing.Point(85, 170);
+            this.comparisonsLabel.Location = new System.Drawing.Point(34, 70);
+            this.comparisonsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.comparisonsLabel.Name = "comparisonsLabel";
-            this.comparisonsLabel.Size = new System.Drawing.Size(190, 32);
+            this.comparisonsLabel.Size = new System.Drawing.Size(70, 13);
             this.comparisonsLabel.TabIndex = 3;
             this.comparisonsLabel.Text = "Comparisons:";
             // 
             // sortLabel
             // 
             this.sortLabel.AutoSize = true;
-            this.sortLabel.Location = new System.Drawing.Point(200, 130);
+            this.sortLabel.Location = new System.Drawing.Point(80, 54);
+            this.sortLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.sortLabel.Name = "sortLabel";
-            this.sortLabel.Size = new System.Drawing.Size(75, 32);
+            this.sortLabel.Size = new System.Drawing.Size(29, 13);
             this.sortLabel.TabIndex = 2;
             this.sortLabel.Text = "Sort:";
             // 
             // dataTypeLabel
             // 
             this.dataTypeLabel.AutoSize = true;
-            this.dataTypeLabel.Location = new System.Drawing.Point(129, 90);
+            this.dataTypeLabel.Location = new System.Drawing.Point(52, 37);
+            this.dataTypeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.dataTypeLabel.Name = "dataTypeLabel";
-            this.dataTypeLabel.Size = new System.Drawing.Size(146, 32);
+            this.dataTypeLabel.Size = new System.Drawing.Size(57, 13);
             this.dataTypeLabel.TabIndex = 1;
             this.dataTypeLabel.Text = "DataType:";
-            this.dataTypeLabel.Click += new System.EventHandler(this.dataTypeLabel_Click);
             // 
             // nLabel
             // 
             this.nLabel.AutoSize = true;
-            this.nLabel.Location = new System.Drawing.Point(232, 50);
+            this.nLabel.Location = new System.Drawing.Point(93, 21);
+            this.nLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.nLabel.Name = "nLabel";
-            this.nLabel.Size = new System.Drawing.Size(43, 32);
+            this.nLabel.Size = new System.Drawing.Size(18, 13);
             this.nLabel.TabIndex = 0;
             this.nLabel.Text = "N:";
             // 
@@ -401,25 +394,25 @@ namespace SortingAlgorithmTimeComplexity {
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(832, 575);
+            this.label2.Location = new System.Drawing.Point(333, 238);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(339, 39);
+            this.label2.Size = new System.Drawing.Size(140, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Experimental Results";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1405, 949);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(562, 396);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

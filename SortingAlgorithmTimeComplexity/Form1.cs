@@ -16,6 +16,10 @@ namespace SortingAlgorithmTimeComplexity {
 
         private enum checkEnum { inOrder, reversedOrder, almostOrder, random };
         private int curListType = 3;
+        private string bestSort = null;
+        private int bestSortEff = Int32.MaxValue;
+        ModList items = null;
+
         public Form1() {
             InitializeComponent();
         }
@@ -30,88 +34,122 @@ namespace SortingAlgorithmTimeComplexity {
 
         }
 
-        private void label1_Click(object sender, EventArgs e) {
-
-        }
-
-        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e) {
-
-        }
-
-        private void dataTypeLabel_Click(object sender, EventArgs e) {
-
-        }
-
         private void almostOrderCheck_CheckedChanged(object sender, EventArgs e) {
             if(curListType == 2 && almostOrderCheck.Checked == false) {
-                curListType = 3;
+                randomCheck.Checked = true;
                 return;
             }
-            if(almostOrderCheck.Checked)
+            
+            if (almostOrderCheck.Checked) {
+                bestSort = null;
+                bestSortEff = Int32.MaxValue;
+                curListType = 2;
                 uncheckAll(2);
-            curListType = 2;
+            }
         }
 
         private void reverseOrderCheck_CheckedChanged(object sender, EventArgs e) {
             if (curListType == 1 && reverseOrderCheck.Checked == false) {
-                curListType = 3;
+                randomCheck.Checked = true;
                 return;
             }
-            if (reverseOrderCheck.Checked)
+            
+            if (reverseOrderCheck.Checked) {
+                bestSort = null;
+                bestSortEff = Int32.MaxValue;
+                curListType = 1;
                 uncheckAll(1);
-            curListType = 1;
+            }
         }
 
         private void inOrderCheck_CheckedChanged(object sender, EventArgs e) {
             if (curListType == 0 && inOrderCheck.Checked == false) {
-                curListType = 3;
+                randomCheck.Checked = true;
                 return;
             }
-            if (inOrderCheck.Checked)
+            
+            if (inOrderCheck.Checked) {
+                bestSort = null;
+                bestSortEff = Int32.MaxValue;
+                curListType = 0;
                 uncheckAll(0);
-            curListType = 0;
+                
+            }
+            
         }
 
         private void randomCheck_CheckedChanged(object sender, EventArgs e) {
             if (curListType == 3 && randomCheck.Checked == false) {
-                curListType = 3;
+                randomCheck.Checked = true;
                 return;
             }
-            if (randomCheck.Checked)
+            
+            if (randomCheck.Checked) {
+                bestSort = null;
+                bestSortEff = Int32.MaxValue;
+                curListType = 3;
                 uncheckAll(3);
-            curListType = 3;
+            }
+            
         }
 
         private void insertBtn_Click(object sender, EventArgs e) {
+            if(items == null) {
+                MessageBox.Show("Error: list must be created first");
+                return;
+            }
+
+            Sort sort = new Sort();
+            sort.insertSort(items.List);
+            if(sort.TotalCount < bestSortEff) {
+                bestSortEff = sort.TotalCount;
+                bestSort = "Insertion Sort";
+                winAlgTextBox.Text = bestSort;
+            }
+
+            setExperimentText(items.List, sort, "Insertion");
 
         }
 
         private void selectBtn_Click(object sender, EventArgs e) {
-
+            if (items == null) {
+                MessageBox.Show("Error: list must be created first");
+                return;
+            }
         }
 
         private void quickBtn_Click(object sender, EventArgs e) {
-
+            if (items == null) {
+                MessageBox.Show("Error: list must be created first");
+                return;
+            }
         }
 
         private void mergeBtn_Click(object sender, EventArgs e) {
-
+            if (items == null) {
+                MessageBox.Show("Error: list must be created first");
+                return;
+            }
         }
 
         private void heapBtn_Click(object sender, EventArgs e) {
-
+            if (items == null) {
+                MessageBox.Show("Error: list must be created first");
+                return;
+            }
         }
 
         private void radixBtn_Click(object sender, EventArgs e) {
-
+            if (items == null) {
+                MessageBox.Show("Error: list must be created first");
+                return;
+            }
         }
 
         private void createListBtn_Click(object sender, EventArgs e) {
-            modList list = new modList(listSizeScroll.Value, curListType);
+            ModList list = new ModList(listSizeScroll.Value, curListType);
+            resetAllTextBoxes();
+            items = list;
         }
 
         private void uncheckAll(int type) {
@@ -143,6 +181,27 @@ namespace SortingAlgorithmTimeComplexity {
         private void listSize_Scroll(object sender, EventArgs e) {
             
             listSizeTextBox.Text = ((TrackBar)sender).Value.ToString();
+        }
+
+        private void setExperimentText(int[] list, Sort sort, string sortType) {
+            listSizeResultText.Text = list.Length.ToString();
+            checkEnum type = (checkEnum)curListType;
+            dataTypeResultText.Text = type.ToString();
+            sortResultText.Text = sortType;
+            comparisonResultText.Text = sort.CompareCount.ToString();
+            movementResultText.Text = sort.MoveCount.ToString();
+            totalTimeResultText.Text = sort.MilliTime.ToString();
+
+        }
+
+        private void resetAllTextBoxes() {
+            winAlgTextBox.Text = null;
+            listSizeResultText.Text = null;
+            dataTypeResultText.Text = null;
+            sortResultText.Text = null;
+            comparisonResultText.Text = null;
+            movementResultText.Text = null;
+            totalTimeResultText.Text = null;
         }
     }
 }

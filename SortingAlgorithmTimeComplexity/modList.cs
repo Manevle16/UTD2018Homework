@@ -6,32 +6,30 @@ using System.Threading.Tasks;
 
 
 namespace SortingAlgorithmTimeComplexity {
-    class modList {
+    class ModList {
 
         private int[] list;
 
-        public modList(int len, int type) {
-            list = new int[len];
+        public int[] List { get => list; set => list = value; }
+
+        public ModList(int len, int type) {
+            List = new int[len];
             Random rand = new Random();
             for(int i = 0; i < len; i++) {
-                list[i] = rand.Next(0, 20000);
+                List[i] = rand.Next(0, 20000);
             }
 
             switch (type) {
                 case 0:
-                    sortList(list, 0, len-1);
+                    sortList(List, 0, len-1);
                     break;
                 case 1:
-                    reverseSortList(list, 0, len - 1);
+                    reverseSortList(List, 0, len - 1);
                     break;
                 case 2:
-                    sortList(list, 0, len - 1);
-                    almostSort(list);
+                    sortList(List, 0, len - 1);
+                    almostSort(List);
                     break;              
-            }
-
-            for (int i = 0; i < len; i++) {
-                Console.Write(list[i] + ", ");
             }
         }
 
