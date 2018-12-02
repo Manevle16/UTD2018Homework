@@ -12,6 +12,7 @@ namespace SortingAlgorithmTimeComplexity {
 
         public int[] List { get => list; set => list = value; }
 
+        // Creates list by length and type sent in
         public ModList(int len, int type) {
             List = new int[len];
             Random rand = new Random();
@@ -33,6 +34,7 @@ namespace SortingAlgorithmTimeComplexity {
             }
         }
 
+        //Sorts list in ascending order and returns it 
         private void sortList(int[] list, int startInd, int endInd) {
             if(startInd < endInd) {
                 int pivot = list[endInd];
@@ -56,6 +58,7 @@ namespace SortingAlgorithmTimeComplexity {
             }
         }
 
+        //Sorts list in descending order and returns it 
         private void reverseSortList(int[] list, int startInd, int endInd) {
             if (startInd < endInd) {
                 int pivot = list[endInd];
@@ -79,6 +82,7 @@ namespace SortingAlgorithmTimeComplexity {
             }
         }
 
+        //Sorts list in ascending order, swaps a few random elements and returns it 
         private void almostSort(int[] list) {
             Random rand = new Random();
             for(int i = 0; i < list.Length; i++) {

@@ -15,6 +15,7 @@ namespace SortingAlgorithmTimeComplexity {
     public partial class Form1 : Form {
 
         private enum checkEnum { inOrder, reversedOrder, almostOrder, random };
+        private int curCheckedList = 3;
         private int curListType = 3;
         private string bestSort = null;
         private int bestSortEff = Int32.MaxValue;
@@ -34,8 +35,9 @@ namespace SortingAlgorithmTimeComplexity {
 
         }
 
+        // Methods for handeling changes in the mode checkboxes
         private void almostOrderCheck_CheckedChanged(object sender, EventArgs e) {
-            if(curListType == 2 && almostOrderCheck.Checked == false) {
+            if(curCheckedList == 2 && almostOrderCheck.Checked == false) {
                 randomCheck.Checked = true;
                 return;
             }
@@ -43,13 +45,13 @@ namespace SortingAlgorithmTimeComplexity {
             if (almostOrderCheck.Checked) {
                 bestSort = null;
                 bestSortEff = Int32.MaxValue;
-                curListType = 2;
+                curCheckedList = 2;
                 uncheckAll(2);
             }
         }
 
         private void reverseOrderCheck_CheckedChanged(object sender, EventArgs e) {
-            if (curListType == 1 && reverseOrderCheck.Checked == false) {
+            if (curCheckedList == 1 && reverseOrderCheck.Checked == false) {
                 randomCheck.Checked = true;
                 return;
             }
@@ -57,13 +59,13 @@ namespace SortingAlgorithmTimeComplexity {
             if (reverseOrderCheck.Checked) {
                 bestSort = null;
                 bestSortEff = Int32.MaxValue;
-                curListType = 1;
+                curCheckedList = 1;
                 uncheckAll(1);
             }
         }
 
         private void inOrderCheck_CheckedChanged(object sender, EventArgs e) {
-            if (curListType == 0 && inOrderCheck.Checked == false) {
+            if (curCheckedList == 0 && inOrderCheck.Checked == false) {
                 randomCheck.Checked = true;
                 return;
             }
@@ -71,7 +73,7 @@ namespace SortingAlgorithmTimeComplexity {
             if (inOrderCheck.Checked) {
                 bestSort = null;
                 bestSortEff = Int32.MaxValue;
-                curListType = 0;
+                curCheckedList = 0;
                 uncheckAll(0);
                 
             }
@@ -79,7 +81,7 @@ namespace SortingAlgorithmTimeComplexity {
         }
 
         private void randomCheck_CheckedChanged(object sender, EventArgs e) {
-            if (curListType == 3 && randomCheck.Checked == false) {
+            if (curCheckedList == 3 && randomCheck.Checked == false) {
                 randomCheck.Checked = true;
                 return;
             }
@@ -87,12 +89,13 @@ namespace SortingAlgorithmTimeComplexity {
             if (randomCheck.Checked) {
                 bestSort = null;
                 bestSortEff = Int32.MaxValue;
-                curListType = 3;
+                curCheckedList = 3;
                 uncheckAll(3);
             }
             
         }
 
+        // Methods for handeling buttons to execute test of sort
         private void insertBtn_Click(object sender, EventArgs e) {
             if(items == null) {
                 MessageBox.Show("Error: list must be created first");
@@ -116,6 +119,16 @@ namespace SortingAlgorithmTimeComplexity {
                 MessageBox.Show("Error: list must be created first");
                 return;
             }
+
+            Sort sort = new Sort();
+            sort.selectionSort(items.List);
+            if (sort.TotalCount < bestSortEff) {
+                bestSortEff = sort.TotalCount;
+                bestSort = "Selection Sort";
+                winAlgTextBox.Text = bestSort;
+            }
+
+            setExperimentText(items.List, sort, "Selection");
         }
 
         private void quickBtn_Click(object sender, EventArgs e) {
@@ -123,6 +136,25 @@ namespace SortingAlgorithmTimeComplexity {
                 MessageBox.Show("Error: list must be created first");
                 return;
             }
+
+            if(curListType == 1 && items.List.Length > 10000) {
+                MessageBox.Show("Error: Quick sort will stack overthrow when in reverse" +
+                    " mode and has more than 10000 elements");
+                return;
+            }
+
+            Sort sort = new Sort();
+            int[] list = new int[items.List.Length];
+            items.List.CopyTo(list, 0);
+
+            sort.quickSort(list, 0, list.Length-1);
+            if (sort.TotalCount < bestSortEff) {
+                bestSortEff = sort.TotalCount;
+                bestSort = "Quick Sort";
+                winAlgTextBox.Text = bestSort;
+            }
+
+            setExperimentText(items.List, sort, "Quick");
         }
 
         private void mergeBtn_Click(object sender, EventArgs e) {
@@ -130,6 +162,20 @@ namespace SortingAlgorithmTimeComplexity {
                 MessageBox.Show("Error: list must be created first");
                 return;
             }
+
+            Sort sort = new Sort();
+            int[] list = new int[items.List.Length];
+            items.List.CopyTo(list, 0);
+
+            sort.mergeSort(list);
+            
+            if (sort.TotalCount < bestSortEff) {
+                bestSortEff = sort.TotalCount;
+                bestSort = "Merge Sort";
+                winAlgTextBox.Text = bestSort;
+            }
+
+            setExperimentText(items.List, sort, "Merge");
         }
 
         private void heapBtn_Click(object sender, EventArgs e) {
@@ -137,6 +183,19 @@ namespace SortingAlgorithmTimeComplexity {
                 MessageBox.Show("Error: list must be created first");
                 return;
             }
+
+            Sort sort = new Sort();
+            int[] list = new int[items.List.Length];
+            items.List.CopyTo(list, 0);
+
+            sort.heapSort(list);
+            
+            if (sort.TotalCount < bestSortEff) {
+                bestSortEff = sort.TotalCount;
+                bestSort = "Heap Sort";
+                winAlgTextBox.Text = bestSort;
+            }
+            setExperimentText(items.List, sort, "Heap");
         }
 
         private void radixBtn_Click(object sender, EventArgs e) {
@@ -144,14 +203,31 @@ namespace SortingAlgorithmTimeComplexity {
                 MessageBox.Show("Error: list must be created first");
                 return;
             }
+
+
+            Sort sort = new Sort();
+            int[] list = new int[items.List.Length];
+            items.List.CopyTo(list, 0);
+
+            sort.radixSort(list);
+          
+            if (sort.TotalCount < bestSortEff) {
+                bestSortEff = sort.TotalCount;
+                bestSort = "Radix Sort";
+                winAlgTextBox.Text = bestSort;
+            }
+            setExperimentText(items.List, sort, "Radix");
         }
 
+        // Creates the list as given by the settings
         private void createListBtn_Click(object sender, EventArgs e) {
-            ModList list = new ModList(listSizeScroll.Value, curListType);
+            curListType = curCheckedList;
+            ModList list = new ModList(listSizeScroll.Value, curCheckedList);
             resetAllTextBoxes();
             items = list;
         }
 
+        //Will uncheck all other check boxes except the mode sent in
         private void uncheckAll(int type) {
 
             if(type == (int)checkEnum.random) {
@@ -178,14 +254,16 @@ namespace SortingAlgorithmTimeComplexity {
            
         }
 
+        // Changes shown number in list size when corresponding scroller changes
         private void listSize_Scroll(object sender, EventArgs e) {
             
             listSizeTextBox.Text = ((TrackBar)sender).Value.ToString();
         }
 
+        // Sets the results of the exepriment text boxes of the sent in test
         private void setExperimentText(int[] list, Sort sort, string sortType) {
             listSizeResultText.Text = list.Length.ToString();
-            checkEnum type = (checkEnum)curListType;
+            checkEnum type = (checkEnum)curCheckedList;
             dataTypeResultText.Text = type.ToString();
             sortResultText.Text = sortType;
             comparisonResultText.Text = sort.CompareCount.ToString();
@@ -194,6 +272,7 @@ namespace SortingAlgorithmTimeComplexity {
 
         }
 
+        // Sets all textboxes to have no text in them
         private void resetAllTextBoxes() {
             winAlgTextBox.Text = null;
             listSizeResultText.Text = null;
